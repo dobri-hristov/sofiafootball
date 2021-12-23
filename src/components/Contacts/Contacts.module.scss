@@ -1,0 +1,69 @@
+@import "./../../styles/variables.scss";
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 0;
+    padding-top: calc(60px + #{$headerHeight});
+    
+    @include breakpoint(lg-only) {
+        width: 95%;
+    }
+}
+
+.title {
+    padding: $spacing-md 0;
+    background: linear-gradient(90deg, rgba(4, 47, 4, 1) 0%, rgba(0, 100, 0, 1) 50%, rgba(4, 47, 4, 1) 100%);
+    color: $light2;
+    box-shadow: $boxShadow;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.info {
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding: $spacing-sm 0;
+    color: white;
+    background: rgba($dark, 0.7);
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        padding: $spacing-sm $spacing-lg;
+
+        @include breakpoint(md-only) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &:hover {
+            background: rgba($dark, 0.6);
+        }
+
+        &__location {
+            flex-basis: 35%;
+            text-align: left;
+            padding-bottom: $spacing-sm;
+            cursor: pointer;
+        }
+        &__number {
+            text-align: center;
+            flex-basis: 30%;
+            padding-bottom: $spacing-sm;
+        }
+        &__icons {
+            display: flex;
+            padding-bottom: $spacing-sm;
+            & li {
+                cursor: pointer;
+                margin: 0 5px;
+            }
+        }
+    }
+}

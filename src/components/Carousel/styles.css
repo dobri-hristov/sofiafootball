@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    height: 70vh;
+}
+.imgContainer {
+    width: 100%;
+    height: 70vh;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 770px) {
+    .container {
+        width: 100%;
+        height: 50vh;
+    }
+    .imgContainer {
+        width: 100%;
+        height: 50vh;
+    }
+}

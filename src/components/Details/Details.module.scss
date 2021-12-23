@@ -1,0 +1,67 @@
+@import "./../../styles/variables.scss";
+
+.container {
+    flex-basis: 25%;
+    text-align: center;
+
+    @include breakpoint(md-only) {
+        margin: 0 auto;
+        margin-top: $spacing-md;
+        // flex-basis: 80%;
+        width: 100%;
+    }
+
+    &__check {
+        margin-bottom: $spacing-lg;
+        text-align: center;
+    }
+}
+
+.title {
+    padding: $spacing-md 0;
+    background-color: $green;
+    color: $light2;
+    box-shadow: $boxShadow;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.info {
+    width: 94%;
+    margin: 0 auto;
+    font-size: 18px;
+    color: black;
+
+    & li {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        color: green;
+    }
+}
+
+.advantage {
+     display: flex;
+     flex-wrap: wrap;
+    @include breakpoint(xs) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.advantage p {
+    margin-bottom: $spacing-sm;
+}
+
+.even {
+    background-color: $light2;
+    padding: $spacing-md;
+}
+.odd {
+    background-color: #bdbbb7;
+    padding: $spacing-md;
+}

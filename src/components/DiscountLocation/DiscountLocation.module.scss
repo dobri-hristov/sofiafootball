@@ -1,0 +1,101 @@
+@import "./../../styles/variables.scss";
+
+.content {
+    &__gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 325px;
+        gap: $spacing-md;
+
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 300px;
+        }
+
+        @include breakpoint(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .gallery__item {
+            cursor: pointer;
+            position: relative;
+            border-radius: $borderRadius;
+            border: 2px solid $white;
+            transition: 0.3s ease all;
+            display: flex;
+            flex-direction: column;
+
+            &:hover {
+                box-shadow: 0px 0px 10px 0px rgba(239, 233, 230, 1);
+
+                .overlay {
+                    background: transparent;
+                }
+            }
+            &__main {
+                &__img {
+                    border-top-left-radius: $borderRadius;
+                    border-top-right-radius: $borderRadius;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 75%;
+                    object-fit: cover;
+                }
+                .overlay {
+                    border-top-left-radius: $borderRadius;
+                    border-top-right-radius: $borderRadius;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 75%;
+                    background: rgba($dark, 0.4);
+                    transition: 0.3s ease all;
+                }
+                &__content {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 30%;
+                    background: $white;
+                    border-bottom-left-radius: $borderRadius;
+                    border-bottom-right-radius: $borderRadius;
+
+                    &__location {
+                        margin-left: 6px;
+                        font-size: 1.2rem;
+                        color: $dark;
+                        letter-spacing: $letterSpacing;
+                        text-align: center;
+                    }
+
+                    &__offers {
+                        padding: 10px 0;
+                        color: red;
+                    }
+                }
+
+                &__tag {
+                    position: absolute;
+                    background: $white;
+                    top: -12px;
+                    left: $spacing-sm;
+                    padding: 6px 8px;
+                    border-radius: $borderRadius;
+                    font-size: 0.8rem;
+                    letter-spacing: $letterSpacing;
+                    z-index: 999;
+                    color: $dark;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

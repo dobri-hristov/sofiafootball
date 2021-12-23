@@ -1,0 +1,163 @@
+// @import "./../../styles/variables.scss";
+
+// .container {
+//     background: $light;
+//     position: relative;
+//     z-index: 10;
+//     margin: 0 auto;
+// }
+
+// .location {
+//     width: 100%;
+//     padding: 60px 0;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding-top: calc(60px + #{$headerHeight});
+
+//     &__content {
+//         margin: 0 1.5rem;
+//         width: 1000px;
+//         display: flex;
+//         flex-direction: column;
+//         &__title {
+//             color: $dark;
+//             font-size: 2rem;
+//             letter-spacing: $letterSpacing;
+//             font-weight: 900;
+//             position: relative;
+//             margin-bottom: $spacing-lg;
+
+//             &::after {
+//                 content: "";
+//                 position: absolute;
+//                 display: inline;
+//                 top: 18px;
+//                 right: 0;
+//                 width: calc(100% - 300px);
+//                 height: 2px;
+//                 background: $dark;
+//             }
+//         }
+//         &__main {
+//             display: flex;
+//             justify-content: space-between;
+//             flex-wrap: wrap;
+
+//             &__info {
+//                 flex-basis: 70%;
+
+//                 @include breakpoint(md-only) {
+//                     flex-basis: 100%;
+//                 }
+//             }
+//         }
+//     }
+
+//     &__about {
+//         text-align: center;
+//         margin: $spacing-md 0;
+
+//         &__title {
+//             margin-bottom: $spacing-sm;
+//             font-size: 1.8rem;
+//             font-weight: 700;
+//         }
+
+//         &__us {
+//             line-height: 20px;
+//         }
+//     }
+// }
+
+// .map {
+//     margin: $spacing-md 0;
+//     border: 1px solid black;
+//     width: 100%;
+//     height: 50vh;
+
+//     @include breakpoint(md) {
+//         height: 70vh;
+//     }
+// }
+
+@import "./../../styles/variables.scss";
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 0;
+    padding-top: calc(60px + #{$headerHeight});
+
+    @include breakpoint(lg-only) {
+        width: 95%;
+    }
+}
+
+.title {
+    padding: $spacing-md 0;
+    background: linear-gradient(90deg, rgba(4, 47, 4, 1) 0%, rgba(0, 100, 0, 1) 50%, rgba(4, 47, 4, 1) 100%);
+    color: $light2;
+    box-shadow: $boxShadow;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.info {
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding: $spacing-sm $spacing-lg;
+    color: white;
+    background: rgba($dark, 0.7);
+    text-align: left;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: $spacing-lg 0;
+
+    @include breakpoint(md-only) {
+        flex-direction: column;
+    }
+
+    &__info {
+        flex-basis: 70%;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include breakpoint(md-only) {
+            flex-basis: 100%;
+        }
+
+        &__about {
+            text-align: center;
+            margin: $spacing-md 0;
+
+            &__title {
+                margin-bottom: $spacing-sm;
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+
+            &__us {
+                line-height: 20px;
+            }
+        }
+        &__map {
+            margin: $spacing-md 0;
+            border: 1px solid black;
+            width: 100%;
+            height: 50vh;
+
+            @include breakpoint(md) {
+                height: 70vh;
+            }
+        }
+    }
+}
