@@ -21,8 +21,8 @@ const Locations = ({ page }) => {
                 <div className={classes.locations__content}>
                     <h2 className={classes.locations__content__title}>Терени в София</h2>
                     <div className={classes.locations__content__gallery}>
-                        {mapData.map(({ id, name, mainImg, adress }) => (
-                            <div className={classes.gallery__item} key={id} onClick={() => handleClick(name)}>
+                        {mapData.map(({ name, mainImg, adress }) => (
+                            <div className={classes.gallery__item} key={name} onClick={() => handleClick(name)}>
                                 <img
                                     src={mainImg}
                                     alt={name}

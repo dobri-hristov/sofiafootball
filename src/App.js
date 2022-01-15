@@ -25,7 +25,7 @@ function App() {
                         <Route path="/терени/:name">
                             <Location />
                         </Route>
-                        <Route path="/booknow">
+                        <Route path="/запази час">
                             <BookNow />
                         </Route>
                         <Route path="/цени">

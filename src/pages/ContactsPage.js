@@ -1,19 +1,15 @@
 import React from "react";
+import Hero from "../components/Hero/Hero";
 import Contacts from "../components/Contacts/Contacts";
 import useScrollToTop from "../hooks/useScrollToTop";
-import field from '../assets/field.jpg'
-
-const styles = {
-    backgroundImage: `url(${field})`,
-    backgroundSize: 'cover',
-}
 
 const ContactsPage = () => {
     useScrollToTop();
+
     return (
-        <div style={styles}>
-                <Contacts />
-        </div>
+        <Hero isDynmic>
+            <Contacts />
+        </Hero>
     );
 };
 

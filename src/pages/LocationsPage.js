@@ -4,6 +4,7 @@ import useScrollToTop from "../hooks/useScrollToTop";
 
 const LocationsPage = () => {
     useScrollToTop();
+    
     return (
         <Fragment>
             <Locations page={true} />

@@ -25,7 +25,7 @@ const Contacts = () => {
             <ul className={classes.info}>
                 {
                     locations.map(loc => (
-                        <li key={loc.id} className={classes.info__row}>
+                        <li key={loc.name} className={classes.info__row}>
                             <p className={classes.info__row__location}
                                 onClick={() => handleClick(loc.name)}>{loc.name}</p>
                             <p className={classes.info__row__number}>{loc.number}</p>

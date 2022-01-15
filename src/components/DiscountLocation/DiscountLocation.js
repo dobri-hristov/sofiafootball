@@ -16,8 +16,8 @@ const DiscountLocation = ({ locationsName }) => {
     return (
         <div className={classes.content}>
             <div className={classes.content__gallery}>
-                {mapData.map(({ id, name, mainImg, adress }) => (
-                    <div className={classes.gallery__item} key={id} onClick={() => handleClick(name)}>
+                {mapData.map(({ name, mainImg, adress }) => (
+                    <div className={classes.gallery__item} key={name} onClick={() => handleClick(name)}>
                         <div className={classes.gallery__item__main}>
                             <img
                                 src={mainImg}

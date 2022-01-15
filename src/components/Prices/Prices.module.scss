@@ -1,6 +1,7 @@
 @import "./../../styles/variables.scss";
 
 .container {
+    position: relative;
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -103,18 +104,30 @@
 
 .first::after {
     top: 258px;
-    right: 210px;
-    width: calc(100% - 900px);
+    right: 80px;
+    width: calc(100% - 630px);
+
+    @include breakpoint(md-only) {
+        display: none;
+    }
 }
 
 .second::after {
     top: 480px;
-    right: 210px;
-    width: calc(100% - 845px);
+    right: 80px;
+    width: calc(100% - 580px);
+
+    @include breakpoint(md-only) {
+        display: none;
+    }
 }
 
 .third::after {
     top: 607px;
-    right: 210px;
-    width: calc(100% - 635px);
+    right: 80px;
+    width: calc(100% - 370px);
+
+    @include breakpoint(md-only) {
+        display: none;
+    }
 }

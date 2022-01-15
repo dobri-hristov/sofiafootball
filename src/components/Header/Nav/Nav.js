@@ -18,7 +18,7 @@ const Nav = ({ isMenu, menuToggle }) => {
                     <Link to="/контакти">Контакти</Link>
                 </li>
             </ul>
-            <Button to="/booknow" className={classes.booknow} onClick={menuToggle}>
+            <Button to="/запази час" className={classes.booknow} onClick={menuToggle}>
                Запази час
             </Button>
         </nav>
